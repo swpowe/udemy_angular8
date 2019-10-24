@@ -16,6 +16,6 @@
         (click)='onCreateServer()'>Add Server</button>
 <!-- <p>{{ allowNewServer }}</p> // same as below-->
 <!-- <p [innerText]='allowNewServer'></p> // can also call a function that results in string -->
-<p>{{ serverCreationStatus }}</p>
-<!-- <app-server></app-server>
-<app-server></app-server> --> 
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
+<app-server *ngFor="let server of servers"></app-server>
